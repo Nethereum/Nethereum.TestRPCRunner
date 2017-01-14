@@ -32,7 +32,6 @@ namespace Nethereum.TestRPCRunner
             if (RedirectOuputToDebugWindow)
             {
                 processStartInfo.RedirectStandardOutput = true;
-               
             }
 
             Process = Process.Start(processStartInfo);
@@ -47,7 +46,6 @@ namespace Nethereum.TestRPCRunner
                     }
                 });
             }
-
         }
 
         private void ExtractTestRpcToTempFile()
@@ -99,6 +97,5 @@ namespace Nethereum.TestRPCRunner
                 }
             }
         }
-
     }
 }

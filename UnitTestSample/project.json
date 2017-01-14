@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "testRunner": "xunit",
   "dependencies": {
@@ -11,7 +11,8 @@
 
   "frameworks": {
     "net46": {
-      "System.IO.FileSystem": "4.0.1-rc2-24027"
+      "System.IO.FileSystem": "4.0.1-rc2-24027",
+      "imports": [ "dotnet52" ]
     }
   }
 }

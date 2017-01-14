@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
@@ -6,9 +6,12 @@
     "System.Diagnostics.Process": "4.3.0"
   },
   "buildOptions": {
-    "embed": [ "testrpc-portable.js" ]  
+    "embed": [ "testrpc-portable.js" ]
   },
   "frameworks": {
-    "netstandard1.3": {}
+    "netstandard1.3": {
+      "imports": [ "dotnet52" ]
+    },
+    "net46": {}
   }
 }

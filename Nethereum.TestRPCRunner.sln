@@ -9,6 +9,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnitTestSample", "UnitTestS
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nethereum.TestRPCRunner", "Nethereum.TestRPCRunner\Nethereum.TestRPCRunner.xproj", "{256A9487-210F-4D02-9E7C-3C9E554169BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecsSample", "SpecsSample\SpecsSample.csproj", "{9C143AFB-F00F-46D0-B1C5-2BCB49186B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nethereum.TestRPCRunner.Net45", "Nethereum.TestRPCRunner.Net45\Nethereum.TestRPCRunner.Net45.csproj", "{E9B96898-C4D6-4CBE-B845-7B00AC349234}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{256A9487-210F-4D02-9E7C-3C9E554169BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{256A9487-210F-4D02-9E7C-3C9E554169BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{256A9487-210F-4D02-9E7C-3C9E554169BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C143AFB-F00F-46D0-B1C5-2BCB49186B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C143AFB-F00F-46D0-B1C5-2BCB49186B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C143AFB-F00F-46D0-B1C5-2BCB49186B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C143AFB-F00F-46D0-B1C5-2BCB49186B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9B96898-C4D6-4CBE-B845-7B00AC349234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B96898-C4D6-4CBE-B845-7B00AC349234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B96898-C4D6-4CBE-B845-7B00AC349234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B96898-C4D6-4CBE-B845-7B00AC349234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

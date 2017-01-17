@@ -25,6 +25,52 @@ Finally execute  ```StopTestRPC()``` to stop the server and remove any temporary
 To ensure cleaning all resources call "Dispose()". 
 
 ### Unit testing
+There is a sample included, which demonstrates how to integrate TestRpc with your tests
+
+```csharp
+
+  [Fact]
+        public async void ShouldDeployAContractWithConstructor()
+        {
+            using (var testrpcRunner = new TestRPCEmbeddedRunner())
+            {
+                try
+                {
+                    testrpcRunner.RedirectOuputToDebugWindow = true;
+                    testrpcRunner.StartTestRPC();
+                    .........
+                } finally {
+                    testrpcRunner.StopTestRPC();  
+                }
+
+```
 
 ### BDD / ATD feature tests
 
+There is a sample included which demonstrates how to create Gherkin style written features, to integrate executable specifications with smart contracts.
+
+```Gherkin
+@needsTestRPC
+Feature: ContractMultiplication
+	In order to avoid silly mistakes
+	As a ethereum user
+	I want to multiply a number
+
+Scenario: Multiplication by 7
+Given I have deployed a multiplication contract with multipler of 7
+	When I call multiply using 7
+	Then the multiplication result should be 49
+
+
+Scenario Outline: Multiplication
+	Given I have deployed a multiplication contract with multipler of <initialMultiplier>
+	When I call multiply using <multiplier>
+	Then the multiplication result should be <multiplicationResult>
+
+	Examples:
+	| initialMultiplier | multiplier | multiplicationResult |
+	| 7                 | 7          | 49                   |
+	| 7                 | 8          | 56                   |
+	| 3                 | 3          | 9                    |
+
+``` 

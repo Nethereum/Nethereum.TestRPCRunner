@@ -18,15 +18,15 @@ namespace SpecsSample
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Xunit.TraitAttribute("Category", "needsTestRPC")]
-    public partial class ContractMultiplicationFeature : Xunit.IClassFixture<ContractMultiplicationFeature.FixtureData>, System.IDisposable
+    public partial class ContractMultiplication2Feature : Xunit.IClassFixture<ContractMultiplication2Feature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ContractMultiplication.feature"
+#line 1 "ContractMultiplication2.feature"
 #line hidden
         
-        public ContractMultiplicationFeature()
+        public ContractMultiplication2Feature()
         {
             this.TestInitialize();
         }
@@ -34,7 +34,7 @@ namespace SpecsSample
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ContractMultiplication", "\tIn order to avoid silly mistakes\r\n\tAs a ethereum user\r\n\tI want to multiply a num" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ContractMultiplication2", "\tIn order to avoid silly mistakes\r\n\tAs a ethereum user\r\n\tI want to multiply a num" +
                     "ber", ProgrammingLanguage.CSharp, new string[] {
                         "needsTestRPC"});
             testRunner.OnFeatureStart(featureInfo);
@@ -65,7 +65,7 @@ namespace SpecsSample
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SetFixture(ContractMultiplicationFeature.FixtureData fixtureData)
+        public virtual void SetFixture(ContractMultiplication2Feature.FixtureData fixtureData)
         {
         }
         
@@ -74,29 +74,29 @@ namespace SpecsSample
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Multiplication by 8")]
-        [Xunit.TraitAttribute("FeatureTitle", "ContractMultiplication")]
-        [Xunit.TraitAttribute("Description", "Multiplication by 8")]
-        public virtual void MultiplicationBy8()
+        [Xunit.FactAttribute(DisplayName="Multiplication by 7")]
+        [Xunit.TraitAttribute("FeatureTitle", "ContractMultiplication2")]
+        [Xunit.TraitAttribute("Description", "Multiplication by 7")]
+        public virtual void MultiplicationBy7()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiplication by 8", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiplication by 7", ((string[])(null)));
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
-testRunner.Given("I have deployed a multiplication contract with multipler of 8", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I have deployed a multiplication contract with multipler of 7", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When("I call multiply using 8", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I call multiply using 7", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then("the multiplication result should be 64", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the multiplication result should be 49", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Xunit.TheoryAttribute()]
-        [Xunit.TraitAttribute("FeatureTitle", "ContractMultiplication")]
+        [Xunit.TraitAttribute("FeatureTitle", "ContractMultiplication2")]
         [Xunit.TraitAttribute("Description", "Multiplication")]
         [Xunit.InlineDataAttribute("7", "7", "49", new string[0])]
-        [Xunit.InlineDataAttribute("3", "2", "6", new string[0])]
+        [Xunit.InlineDataAttribute("7", "8", "56", new string[0])]
         [Xunit.InlineDataAttribute("3", "3", "9", new string[0])]
         public virtual void Multiplication(string initialMultiplier, string multiplier, string multiplicationResult, string[] exampleTags)
         {
@@ -120,12 +120,12 @@ this.ScenarioSetup(scenarioInfo);
             
             public FixtureData()
             {
-                ContractMultiplicationFeature.FeatureSetup();
+                ContractMultiplication2Feature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                ContractMultiplicationFeature.FeatureTearDown();
+                ContractMultiplication2Feature.FeatureTearDown();
             }
         }
     }

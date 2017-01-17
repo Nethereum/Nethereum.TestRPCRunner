@@ -47,7 +47,7 @@ There is a sample included, which demonstrates how to integrate TestRpc with you
 
 ### BDD / ATD feature tests
 
-There is a sample included which demonstrates how to create Gherkin style written features, to integrate executable specifications with smart contracts.
+There is a sample included which demonstrates how to create Gherkin style written features, enable the integration of executable specifications with smart contracts.
 
 ```Gherkin
 @needsTestRPC

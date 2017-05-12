@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>TestRpc embedded in Nethereum to simplify smart contract and Ethereum integration testing.</Description>
+    <Copyright>Juan Blanco</Copyright>
+    <AssemblyTitle>Nethereum.TestRPCRunner</AssemblyTitle>
+    <Authors>Juan Blanco</Authors>
+    <TargetFrameworks>netstandard1.3;net46</TargetFrameworks>
+    <AssemblyName>Nethereum.TestRPCRunner</AssemblyName>
+    <PackageId>Nethereum.TestRPCRunner</PackageId>
+    <PackageTags>Netherum;Ethereum;Blockchain;TestRPC</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo64x64.png</PackageIconUrl>
+    <PackageProjectUrl>http://www.nethereum.com</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Nethereum/Nethereum/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Nethereum</RepositoryUrl>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.3' ">$(PackageTargetFallback);dotnet52</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="testrpc-portable.js" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+    <PackageReference Include="System.Diagnostics.Process" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>

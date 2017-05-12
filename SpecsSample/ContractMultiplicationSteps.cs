@@ -59,7 +59,7 @@ namespace SpecsSample
         [When(@"I call multiply using (.*)")]
         public async Task WhenICallMultiplyUsing(int multiplier)
         {
-            var contract = ScenarioContext.Current["multiplicationContract"] as Contract;
+            var contract = ScenarioContext.Current["multiplicationContract"] as Nethereum.Contracts.Contract;
             var multiplyFunction = contract.GetFunction("multiply");
             var callResult = await multiplyFunction.CallAsync<int>(multiplier);
             ScenarioContext.Current.Add("multiplicationResult", callResult);
